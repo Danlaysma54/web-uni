@@ -1,0 +1,11 @@
+<?php
+$arr1=[1,2,3];
+$arr2=['a','b','c'];
+$res=array();
+for($i=0;$i<count($arr1);$i++){
+array_push($res,$arr1[$i]);
+array_push($res,$arr2[$i]);
+}
+print_r($arr1);
+print_r($arr2);
+print_r($res);

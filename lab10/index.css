@@ -1,0 +1,13 @@
+#stopwatch {
+    display: flex;
+    color: green;
+    font-size: 48px;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aquamarine;
+    height: 100vh;
+    margin: 0;
+}
