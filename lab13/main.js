@@ -234,7 +234,7 @@ const question10 = {
     "answers":
     [
         {
-            "answer":"33",
+            "answer":"23",
             "isTrue":"true"
 
         },

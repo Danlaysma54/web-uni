@@ -1,0 +1,22 @@
+#wrapper {
+    align-content: center;
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      justify-content: center; 
+      align-items: center;
+    }
+    button {
+      margin-top: 10px;
+      height: 100px;
+      width: 100px;
+      background-color: inherit;
+      background-color: brown;
+      border-radius: 8px;
+    }
+    body{
+      background-color: blueviolet;
+    }
+.puzzle{
+height: 100px;
+width: 100px;
+}
