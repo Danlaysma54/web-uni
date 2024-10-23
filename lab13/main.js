@@ -254,6 +254,7 @@ const question10 = {
     ]
 
 }
+let questions = [question1,question2,question3,question4,question5,question6,question7,question8,question9,question10]
 function nextQuestion(){
     let question = document.getElementById('question');
     let answer_1=document.getElementById('answer_1');
@@ -261,116 +262,25 @@ function nextQuestion(){
     let answer_3=document.getElementById('answer_3');
     let answer_4=document.getElementById('answer_4');
     let result=document.getElementById('res');
-    switch(question_numb){
-        case 2:
-            question.innerText=question2.question;
-            answer_1.innerText=question2.answers[0].answer;
-            answer_2.innerText=question2.answers[1].answer;
-            answer_3.innerText=question2.answers[2].answer;
-            answer_4.innerText=question2.answers[3].answer;
-            answer_1.dataset.is_true=question2.answers[0].isTrue;
-            answer_2.dataset.is_true=question2.answers[1].isTrue;
-            answer_3.dataset.is_true=question2.answers[2].isTrue;
-            answer_4.dataset.is_true=question2.answers[3].isTrue;
-            break;
-    case 3:
-            question.innerText=question3.question;
-            answer_1.innerText=question3.answers[0].answer;
-            answer_2.innerText=question3.answers[1].answer;
-            answer_3.innerText=question3.answers[2].answer;
-            answer_4.innerText=question3.answers[3].answer;
-            answer_1.dataset.is_true=question3.answers[0].isTrue;
-            answer_2.dataset.is_true=question3.answers[1].isTrue;
-            answer_3.dataset.is_true=question3.answers[2].isTrue;
-            answer_4.dataset.is_true=question3.answers[3].isTrue;
-            break;
-    case 4:
-            question.innerText=question4.question;
-            answer_1.innerText=question4.answers[0].answer;
-            answer_2.innerText=question4.answers[1].answer;
-            answer_3.innerText=question4.answers[2].answer;
-            answer_4.innerText=question4.answers[3].answer;
-            answer_1.dataset.is_true=question4.answers[0].isTrue;
-            answer_2.dataset.is_true=question4.answers[1].isTrue;
-            answer_3.dataset.is_true=question4.answers[2].isTrue;
-            answer_4.dataset.is_true=question4.answers[3].isTrue;
-            break;
-    case 5:
-            answer_1.innerText=question5.answers[0].answer;
-            question.innerText=question5.question;
-            answer_2.innerText=question5.answers[1].answer;
-            answer_3.innerText=question5.answers[2].answer;
-            answer_4.innerText=question5.answers[3].answer;
-            answer_1.dataset.is_true=question5.answers[0].isTrue;
-            answer_2.dataset.is_true=question5.answers[1].isTrue;
-            answer_3.dataset.is_true=question5.answers[2].isTrue;
-            answer_4.dataset.is_true=question5.answers[3].isTrue;
-            break;
-    case 6:
-            question.innerText=question6.question;
-            answer_1.innerText=question6.answers[0].answer;
-            answer_2.innerText=question6.answers[1].answer;
-            answer_3.innerText=question6.answers[2].answer;
-            answer_4.innerText=question6.answers[3].answer;
-            answer_1.dataset.is_true=question6.answers[0].isTrue;
-            answer_2.dataset.is_true=question6.answers[1].isTrue;
-            answer_3.dataset.is_true=question6.answers[2].isTrue;
-            answer_4.dataset.is_true=question6.answers[3].isTrue;
-            break;
-    case 7:
-            question.innerText=question7.question;
-            answer_1.innerText=question7.answers[0].answer;
-            answer_2.innerText=question7.answers[1].answer;
-            answer_3.innerText=question7.answers[2].answer;
-            answer_4.innerText=question7.answers[3].answer;
-            answer_1.dataset.is_true=question7.answers[0].isTrue;
-            answer_2.dataset.is_true=question7.answers[1].isTrue;
-            answer_3.dataset.is_true=question7.answers[2].isTrue;
-            answer_4.dataset.is_true=question7.answers[3].isTrue;
-            break;
-    case 8:
-            question.innerText=question8.question;
-            answer_1.innerText=question8.answers[0].answer;
-            answer_2.innerText=question8.answers[1].answer;
-            answer_3.innerText=question8.answers[2].answer;
-            answer_4.innerText=question8.answers[3].answer;
-            answer_1.dataset.is_true=question8.answers[0].isTrue;
-            answer_2.dataset.is_true=question8.answers[1].isTrue;
-            answer_3.dataset.is_true=question8.answers[2].isTrue;
-            answer_4.dataset.is_true=question8.answers[3].isTrue;
-            break;
-    case 9:
-            question.innerText=question9.question;
-            answer_1.innerText=question9.answers[0].answer;
-            answer_2.innerText=question9.answers[1].answer;
-            answer_3.innerText=question9.answers[2].answer;
-            answer_4.innerText=question9.answers[3].answer;
-            answer_1.dataset.is_true=question9.answers[0].isTrue;
-            answer_2.dataset.is_true=question9.answers[1].isTrue;
-            answer_3.dataset.is_true=question9.answers[2].isTrue;
-            answer_4.dataset.is_true=question9.answers[3].isTrue;
-            break;
-    case 10: 
-            question.innerText=question10.question;
-            answer_1.innerText=question10.answers[0].answer;
-            answer_2.innerText=question10.answers[1].answer;
-            answer_3.innerText=question10.answers[2].answer;
-            answer_4.innerText=question10.answers[3].answer;
-            answer_1.dataset.is_true=question10.answers[0].isTrue;
-            answer_2.dataset.is_true=question10.answers[1].isTrue;
-            answer_3.dataset.is_true=question10.answers[2].isTrue;
-            answer_4.dataset.is_true=question10.answers[3].isTrue;
-            break;
-    case 11:
-            let res = document.getElementById('res')
-            result.innerText='right answers: '+res.dataset.answer;
-            question.innerText="";
-            answer_1.innerText="";
-            answer_2.innerText="";
-            answer_3.innerText="";
-            answer_4.innerText="";
-            break;
-}
+    if(Number(question.dataset.numb)==10){
+        let res = document.getElementById('res')
+        result.innerText='right answers: '+res.dataset.answer;
+        question.remove();
+        answer_1.remove();
+        answer_2.remove();
+        answer_3.remove();
+        answer_4.remove();
+}   else{
+    question.innerText=questions[Number(question.dataset.numb)].question;
+    answer_1.innerText=questions[Number(question.dataset.numb)].answers[0].answer;
+    answer_2.innerText=questions[Number(question.dataset.numb)].answers[1].answer;
+    answer_3.innerText=questions[Number(question.dataset.numb)].answers[2].answer;
+    answer_4.innerText=questions[Number(question.dataset.numb)].answers[3].answer;
+    answer_1.dataset.is_true=questions[Number(question.dataset.numb)].answers[0].isTrue;
+    answer_2.dataset.is_true=questions[Number(question.dataset.numb)].answers[1].isTrue;
+    answer_3.dataset.is_true=questions[Number(question.dataset.numb)].answers[2].isTrue;
+    answer_4.dataset.is_true=questions[Number(question.dataset.numb)].answers[3].isTrue;
+    }
 }
 function start(){
     let question = document.getElementById('question');
@@ -392,6 +302,7 @@ function start(){
 }
 
 function isTrue(){
+    let question = document.getElementById('question');
     let answer = document.getElementById(event.srcElement.id);
     console.log(answer)
     let res = document.getElementById('res')
@@ -400,6 +311,6 @@ function isTrue(){
         res.dataset.answer= Number(res.dataset.answer)+1;
         console.log(res.dataset.answer);
     }
-    question_numb++;
+    question.dataset.numb=Number(question.dataset.numb)+1;
     nextQuestion();
 }
