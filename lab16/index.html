@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Code Input</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Введите пин-код</h2>
+        <div class="pin-input">
+            <input type="password" id="pin1" maxlength="6" readonly>
+            <input type="password" id="pin2" maxlength="6" readonly>
+        </div>
+        <div class="numpad">
+            <!-- Numbers 1-9 -->
+            <button onclick="addDigit('1')">1</button>
+            <button onclick="addDigit('2')">2</button>
+            <button onclick="addDigit('3')">3</button>
+            <button onclick="addDigit('4')">4</button>
+            <button onclick="addDigit('5')">5</button>
+            <button onclick="addDigit('6')">6</button>
+            <button onclick="addDigit('7')">7</button>
+            <button onclick="addDigit('8')">8</button>
+            <button onclick="addDigit('9')">9</button>
+            <!-- Extra buttons -->
+            <button onclick="deleteDigit()">⌫</button>
+            <button onclick="addDigit('0')">0</button>
+            <button onclick="clearInput()">C</button>
+        </div>
+        <button class="submit-button" id="submitBtn" disabled onclick="validatePin()">Подтвердить</button>
+    </div>
+    <script type="text/javaScript" src="./index.js"></script>
+</body>
+</html>
