@@ -1,0 +1,34 @@
+html, body {
+    height: 100%; /* Ensure full height */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.center-container {
+    position: relative; /* For positioning the button and text together */
+    text-align: center;
+}
+
+.button-container {
+    position: relative; /* Allows positioning text relative to the button */
+    display: inline-block; /* Keeps the button and text in one block */
+}
+
+#ball_button {
+    border: none; /* Optional: Remove button border if needed */
+    padding: 0;
+    background: transparent;
+    position: relative; /* For text overlay */
+}
+
+#text {
+    position: absolute;
+    top: 50%; /* Vertically center the text */
+    left: 50%; /* Horizontally center the text */
+    transform: translate(-50%, -50%); /* Offset by 50% of its size to truly center */
+    color: white; /* Adjust text color for contrast (optional) */
+    font-weight: bold; /* Make the text more visible */
+    pointer-events: none; /* Prevent the text from interfering with button clicks */
+}
